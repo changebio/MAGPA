@@ -1,0 +1,1 @@
+vignettes/Magpa.Rmd
