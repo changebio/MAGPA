@@ -27,7 +27,7 @@ The **MAGPA** package can be installed via GitHub. Befor installation, R or Rstu
 ```{r Installation, eval = FALSE}
 if (!require("devtools"))
   install.packages("devtools")
-  devtools::install_github("changebio/MAGPA")
+devtools::install_github("changebio/MAGPA")
 ```
 
 ```{r}

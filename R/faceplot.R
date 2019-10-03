@@ -58,7 +58,7 @@ visual3d <- function(mesh, value = NULL, col = NULL, output = NULL) {
         dota <- dotanno(idxtype, cf = colorRampPalette(c("white", col)))
         col_load <- shadeanno(dota, ref.m$it)
         rgl.viewpoint(0, 0, fov = 0)
-        shade3d(ref.m, col = col_load, alpha = (col_load == col) * (1 - alpha) + alpha)
+        shade3d(ref.m, col = col_load, alpha = (col_load == col) * (1 - alpha) + alpha,meshColor = "legacy")
         if (!is.null(output)) {
             rgl.postscript(paste0(output, ".pdf"), fmt = "pdf")
             rgl.clear()
@@ -76,7 +76,7 @@ visual3d <- function(mesh, value = NULL, col = NULL, output = NULL) {
 
         col_load <- shadeanno(face.seg, ref.m$it)
         rgl.viewpoint(0, 0, fov = 0)
-        shade3d(ref.m, col = col_load)
+        shade3d(ref.m, col = col_load,meshColor = "legacy")
         if (!is.null(output)) {
             rgl.postscript(paste0(output, ".pdf"), fmt = "pdf")
             rgl.clear()
@@ -88,7 +88,7 @@ visual3d <- function(mesh, value = NULL, col = NULL, output = NULL) {
     shadehm <- function(ref.m, val, col.pal = colorRampPalette(c("blue", "red")), output = NULL) {
         col_load <- rep(colorbar(val, col.pal), each = 3)
         rgl.viewpoint(0, 0, fov = 0)
-        shade3d(ref.m, col = col_load)
+        shade3d(ref.m, col = col_load,meshColor = "legacy")
         if (!is.null(output)) {
             rgl.postscript(paste0(output, ".pdf"), fmt = "pdf")
             rgl.clear()
@@ -96,7 +96,7 @@ visual3d <- function(mesh, value = NULL, col = NULL, output = NULL) {
     }
     if (is.null(value) & is.null(col)) {
         rgl.viewpoint(0, 0, fov = 0)
-        shade3d(ref.m, col = "white")
+        shade3d(ref.m, col = "white",meshColor = "legacy")
         if (!is.null(output)) {
           rgl.postscript(paste0(output, ".pdf"), fmt = "pdf")
           rgl.clear()
