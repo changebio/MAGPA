@@ -18,7 +18,7 @@ Description: The MAGPA (multivariate analysis of genotype–phenotype associatio
         such as the phenotypic changes under different genotypes, which is highly customized. 
         it can draw a 3D object with different style and gradient colors.
 Date: 2019-09-30
-Depends: R (>= 3.5)
+Depends: R (>= 3.4)
 Imports: assertthat, paran, rgl, snpStats, yacca, grDevices, graphics, methods, stats, utils
 Suggests: MASS, rmarkdown, knitr, BiocStyle
 VignetteBuilder: knitr
